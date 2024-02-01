@@ -5,9 +5,10 @@ import java.util.List;
 
 import jakarta.persistence.Entity;
 import jakarta.persistence.OneToMany;
-@Entity
-public class Cliente extends Pessoa {
 
+@Entity
+public class Tecnico extends Pessoa{
+    
     @OneToMany
     private List<Chamado> chamados = new ArrayList<>();
 

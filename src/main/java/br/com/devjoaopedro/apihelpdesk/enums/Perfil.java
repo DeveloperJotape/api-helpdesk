@@ -2,7 +2,7 @@ package br.com.devjoaopedro.apihelpdesk.enums;
 
 public enum Perfil {
     ADMIN("Administrador"),
-    TECNICO("Tecnico"),
+    TECNICO("Técnico"),
     CLIENTE("Cliente");
 
     private String perfil;
