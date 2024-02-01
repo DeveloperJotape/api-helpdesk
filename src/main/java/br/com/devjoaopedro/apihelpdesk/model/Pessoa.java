@@ -1,12 +1,12 @@
 package br.com.devjoaopedro.apihelpdesk.model;
 
 import br.com.devjoaopedro.apihelpdesk.enums.Perfil;
-import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
+import jakarta.persistence.MappedSuperclass;
 
-@Entity
+@MappedSuperclass
 public abstract class Pessoa {
 
     @Id
