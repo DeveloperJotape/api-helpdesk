@@ -8,6 +8,8 @@ import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
+import jakarta.persistence.JoinColumn;
+import jakarta.persistence.ManyToOne;
 
 @Entity
 public class Chamado {
@@ -21,6 +23,14 @@ public class Chamado {
     private Prioridade prioridade;
     private Status status;
     private String observacao;
+
+    @ManyToOne
+    @JoinColumn(name = "cliente_id_fk")
+    private Cliente cliente;
+
+    @ManyToOne
+    @JoinColumn(name = "tecnico_id_fk")
+    private Tecnico tecnico;
     
     public Chamado() {
     }
@@ -77,6 +87,18 @@ public class Chamado {
     }
     public void setObservacao(String observacao) {
         this.observacao = observacao;
+    }
+    public Cliente getCliente() {
+        return cliente;
+    }
+    public void setCliente(Cliente cliente) {
+        this.cliente = cliente;
+    }
+    public Tecnico getTecnico() {
+        return tecnico;
+    }
+    public void setTecnico(Tecnico tecnico) {
+        this.tecnico = tecnico;
     }
 
 }
